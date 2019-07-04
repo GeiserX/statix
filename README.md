@@ -1,6 +1,6 @@
 # StatiX
 
-Webapp that shows graphics of an ISP. It includes:
+Webapp that shows graphics for a common ISP. It includes:
 
 1) Graphics for connected PPPoE users in the entire network
 2) Graphics for connected users splitted by services
