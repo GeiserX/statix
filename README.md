@@ -1,4 +1,16 @@
-# StatiX
+<p align="center">
+  <img src="docs/images/banner.svg" alt="StatiX banner" />
+</p>
+
+<h1 align="center">StatiX</h1>
+
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+</p>
+
+<p align="center">ISP network statistics and monitoring dashboard</p>
+
+---
 
 Webapp that shows graphics for a common ISP. It includes:
 
@@ -10,9 +22,8 @@ Webapp that shows graphics for a common ISP. It includes:
 
 ## Author
 
-* **Sergio Fernández** - *Creator* - [DrumSergio](https://github.com/DrumSergio)
+[@GeiserX](https://github.com/GeiserX)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
