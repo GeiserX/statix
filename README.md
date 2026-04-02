@@ -20,6 +20,13 @@ Webapp that shows graphics for a common ISP. It includes:
 4) Graphics for HotSpot users
 5) Search tool in order to identify possible issues of HotSpot users. You can search where the user is located, and more info about the connection stats.
 
+## Related ISP/Telecom Tools
+
+- [genieacs-container](https://github.com/GeiserX/genieacs-container) — Helm chart and container for GenieACS TR-069
+- [router-express](https://github.com/GeiserX/router-express) — Auto-configure routers and sync databases
+- [services-isp](https://github.com/GeiserX/services-isp) — Automate common ISP operational tasks
+- [ScriptPoblar](https://github.com/GeiserX/ScriptPoblar) — Batch device provisioning and CRM operations
+
 ## Author
 
 [@GeiserX](https://github.com/GeiserX)
