@@ -5,7 +5,7 @@
 <h1 align="center">StatiX</h1>
 
 <p align="center">
-  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License: GPL-3.0" /></a>
 </p>
 
 <p align="center">ISP network statistics and monitoring dashboard</p>
@@ -33,4 +33,4 @@ Webapp that shows graphics for a common ISP. It includes:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
