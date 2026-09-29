@@ -22,10 +22,10 @@ An R/Shiny webapp that shows graphics for an ISP. It includes:
 
 ## Quick start
 
-You need MongoDB on `localhost:27017`, MySQL access to the RADIUS server, R with `shiny`, `RMongo`, `RMySQL`, `dplyr`, `ggplot2`, `scales`, `stringr` and `rjson`, and Python 2 plus PHP for the HotSpot collectors. The collector writes `listaMKT.csv` to `/home/tecnico/EstadisticasWEB`, where the app reads it, so clone the repo there or edit `scriptServicioBBDD.R` line 20. Set the RADIUS host and password in the collector, start it, then the web app:
+You need MongoDB on `localhost:27017`, MySQL access to the RADIUS server, R with `shiny`, `RMongo`, `RMySQL`, `dplyr`, `ggplot2`, `scales`, `stringr` and `rjson`, and Python 2 plus PHP for the HotSpot collectors. The collector writes `listaMKT.csv` to `/home/tecnico/EstadisticasWEB`, where the app reads it, so clone the repo there or edit `scriptServicioBBDD.R` line 20. Set the RADIUS host and password in the collector. The collector loops forever, so start it in the background, then the web app:
 
 ```bash
-Rscript scriptServicioBBDD.R
+Rscript scriptServicioBBDD.R &
 Rscript -e 'shiny::runApp(".", port = 8081, host = "127.0.0.1")'
 ```
 
