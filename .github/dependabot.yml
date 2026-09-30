@@ -13,3 +13,18 @@ updates:
       - "automated"
     commit-message:
       prefix: "ci"
+  # The docs toolchain: docs.yml installs docs/requirements-docs.txt to run
+  # MkDocs. There is no other Python dependency file in the repo.
+  - package-ecosystem: "pip"
+    directory: "/docs"
+    schedule:
+      interval: "monthly"
+    groups:
+      docs:
+        patterns:
+          - "*"
+    labels:
+      - "documentation"
+      - "automated"
+    commit-message:
+      prefix: "docs"
