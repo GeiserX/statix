@@ -22,7 +22,7 @@ An R/Shiny webapp that shows graphics for an ISP. It includes:
 
 ## Quick start
 
-You need MongoDB on `localhost:27017`, MySQL access to the RADIUS server, R with `shiny`, `RMongo`, `RMySQL`, `dplyr`, `ggplot2`, `scales`, `stringr` and `rjson`, and Python 2 plus PHP for the HotSpot collectors. The collector writes `listaMKT.csv` to `/home/tecnico/EstadisticasWEB`, where the app reads it, so clone the repo there or edit `scriptServicioBBDD.R` line 20. Set the RADIUS host and password in the collector. The collector loops forever, so start it in the background, then the web app:
+You need MongoDB on `localhost:27017`, MySQL access to the RADIUS server, and R with `shiny`, `RMongo` (from the CRAN archive), `RMySQL`, `dplyr`, `ggplot2`, `scales`, `stringr` and `rjson`. The Traffic and HotSpot tabs need more; [Getting started](https://geiserx.github.io/statix/getting-started/) lists it. The collector writes `listaMKT.csv` to `/home/tecnico/EstadisticasWEB`, where the app reads it, so clone the repo there or edit `scriptServicioBBDD.R` line 20. Set the RADIUS host and password in the collector. The collector loops forever, so start it in the background, then the web app:
 
 ```bash
 Rscript scriptServicioBBDD.R &
@@ -30,6 +30,16 @@ Rscript -e 'shiny::runApp(".", port = 8081, host = "127.0.0.1")'
 ```
 
 Open http://127.0.0.1:8081. The `AtStartup*.sh` scripts show which collector feeds which tab.
+
+## Documentation
+
+The docs are at [geiserx.github.io/statix](https://geiserx.github.io/statix/).
+
+- [Getting started](https://geiserx.github.io/statix/getting-started/): what it needs, the archived R packages, the first run, starting at boot
+- [Usage](https://geiserx.github.io/statix/usage/): the five tabs and what each chart shows
+- [Configuration](https://geiserx.github.io/statix/configuration/): every setting, file by file and line by line
+- [How it works](https://geiserx.github.io/statix/how-it-works/): the collectors, what MongoDB stores, the security model
+- [Troubleshooting](https://geiserx.github.io/statix/troubleshooting/): blank charts, empty lists, wrong traffic points, and what to put in an issue
 
 ## Related projects
 
