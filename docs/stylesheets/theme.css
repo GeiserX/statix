@@ -3,8 +3,8 @@
  * banner.svg draws "StatiX" in white on #05070d, the tagline in indigo
  * #a5b4fc, and a fan of lines in cyan, sky, blue, violet, purple and pink.
  * The header and the dark page use the banner background; the accent is the
- * fan's cyan. mkdocs.yml sets `primary: custom` and `accent: custom`, so
- * Material paints nothing until these variables exist.
+ * fan's cyan. zensical.toml sets `primary: custom` and `accent: custom`, so
+ * the theme paints nothing until these variables exist.
  */
 :root {
   --md-primary-fg-color: #05070d; /* banner background */
@@ -31,6 +31,13 @@
   --md-typeset-a-color: #0e7490;
 }
 
+/* Zensical's modern look paints the current page in the side nav with the
+   accent, which is that same faint cyan on the light scheme. Use the link
+   colour there instead. */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active {
+  color: var(--md-typeset-a-color);
+}
+
 /* Fixed logo size so it does not crowd the site name. */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
@@ -44,9 +51,15 @@
  * .md-header__topic and the page title in a second one, and swaps them on
  * scroll. Styling both would change every page title too. */
 .md-header__topic:first-child .md-ellipsis {
-  color: #ffffff;
   font-weight: 800;
   letter-spacing: -0.01em;
+}
+
+/* The white only on the dark scheme: Zensical's modern header takes the page
+   background, so on the light scheme it is white and the white name would
+   vanish. There the name keeps the default text colour. */
+[data-md-color-scheme="slate"] .md-header__topic:first-child .md-ellipsis {
+  color: #ffffff;
 }
 
 /* Keep the mark and the name close, so they read as one unit. */
